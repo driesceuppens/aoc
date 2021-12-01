@@ -7,10 +7,12 @@ main = do
         contents <- hGetContents handle
         let singlewords = words contents
             list = f singlewords
-            -- end = tail list
-            -- zipped = zip list end
-            out = filter p (zip list (tail list))
-        print (length out)
+            -- First part
+            first_part = filter p (zip list (tail list))
+            -- Second part
+            second_part = filter p (zip list (drop 3 list))
+        print (length first_part)
+        print (length second_part)
         hClose handle
 
 f :: [String] -> [Int]
