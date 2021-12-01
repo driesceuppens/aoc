@@ -112,3 +112,12 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# Haskell thins
+*.o
+*.hi
+
+# batch files and binaries
+*.bat
+*.exe
+*.dll
